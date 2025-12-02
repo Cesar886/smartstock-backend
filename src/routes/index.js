@@ -88,4 +88,14 @@ router.get('/inventario/producto/:productoId', inventarioController.getEstadoPro
 router.get('/inventario/resumen', inventarioController.getResumenInventario);
 router.get('/inventario/movimientos', inventarioController.getMovimientos);
 
+// ============================================
+// RUTAS DE VALIDACIÓN DE NÓMINA
+// ============================================
+import { upload as uploadNomina } from '../controllers/validacionEmpleadosController.js';
+import * as validacionController from '../controllers/validacionEmpleadosController.js';
+
+router.post('/validacion/nomina', uploadNomina.single('archivo'), validacionController.validarArchivoNomina);
+router.get('/validacion/plantilla', validacionController.descargarPlantilla);
+router.get('/validacion/empleados/:clienteId', validacionController.getEmpleadosValidados);
+
 export default router;
