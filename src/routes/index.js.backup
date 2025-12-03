@@ -41,7 +41,7 @@ router.get('/contratos/:id', contratosController.getContratoById);
 // RUTAS DE PEDIDOS
 // ============================================
 router.post('/pedidos/validar', pedidosController.validarPedido);
-router.post('/pedidos', pedidosController.crearPedidoSimple);
+router.post('/pedidos', pedidosController.crearPedido);
 router.post('/pedidos/simple', pedidosController.crearPedidoSimple);
 router.get('/pedidos', pedidosController.getAllPedidos);
 router.put('/pedidos/:id/aprobar', pedidosController.aprobarPedido);
