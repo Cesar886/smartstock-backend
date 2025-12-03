@@ -14,6 +14,7 @@ const router = express.Router();
 // ============================================
 // RUTAS DE CLIENTES
 // ============================================
+router.post('/clientes/login', clientesController.loginCliente);
 router.get('/clientes', clientesController.getAllClientes);
 router.get('/clientes/:id', clientesController.getClienteById);
 router.post('/clientes', clientesController.createCliente);
